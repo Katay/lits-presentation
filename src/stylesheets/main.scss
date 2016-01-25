@@ -1,0 +1,48 @@
+body {
+  background-image: url(../images/B_01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  .header {
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    .navbar-toggle {
+      display: inline-block !important;
+      border-color: #3cf;
+      transition: all 375ms ease-in;
+    }
+    #menu {
+      background-color: #4D7EA9;
+      background-color: rgba(0,0,0,0);
+      right: 15px;;
+      left: auto;
+      a {
+        color: #fff;
+        font-weight: 500;
+        &:hover, &:focus {
+          background-color: rgba(0,0,0,0.5);
+        background-image: linear-gradient(to bottom, #335B7E 0%, #345C7F 100%);
+          background-image: none;
+        }
+      }
+      &.menu-visible {
+        display: block;
+      }
+    }
+  }
+  #fullpage {
+    color: yellow;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .footer {
+    height: 30px;
+    line-height: 30px;
+    position: fixed;
+    bottom: 0;
+    padding: 0 20px;
+    color: #fff;
+  }
+}
