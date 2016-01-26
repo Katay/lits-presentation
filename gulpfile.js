@@ -21,7 +21,7 @@ gulp.task('watch', ['js', 'sass'], function () {
 });
 
 gulp.task('clean', function () {
-    return del([img.dest, js.dest, styles.dest]).then(function (paths) {
+    return del('./dist').then(function (paths) {
         console.log('Deleted files/folders:\n', paths.join('\n'));
     });
 });

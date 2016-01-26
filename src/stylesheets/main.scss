@@ -1,8 +1,18 @@
+@font-face {
+  font-family: "Exo";
+  src: url(../fonts/Exo-Regular.otf);
+}
+@font-face {
+  font-family: "Myriad Pro";
+  src: url(../fonts/MYRIADPRO-REGULAR.woff);
+}
+
 body {
-  background-image: url(../images/B_01.jpg);
+  background-image: url(../images/background.png);
   background-repeat: no-repeat;
   background-size: cover;
   .header {
+    text-align: center;
     height: 50px;
     position: absolute;
     top: 0;
@@ -33,9 +43,379 @@ body {
     }
   }
   #fullpage {
-    color: yellow;
     text-align: center;
     vertical-align: middle;
+    .section {
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      .slide-description {
+        font-size: 14.733px;
+        font-family: "Exo";
+        color: rgb(78, 165, 234);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+      }
+
+      .slide-title {
+        margin-bottom: 20px;
+        position: relative;
+        left: 40%;
+        text-align: left;
+        font-size: 36px;
+        font-family: "Exo";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.2;
+        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        border-bottom: 2px solid #4186E6;
+      }
+
+
+    }
+    .slide1 {
+      background-image: url(../images/Slide1.png);
+      background-position: 50% 100%;
+    }
+
+    .slide2 {
+      .slide2-map {
+        background-image: url(../images/Slide2.png);
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+      }
+
+      .the_concept {
+        font-size: 25.782px;
+        font-family: "Exo";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: left;
+        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        margin-bottom: 60px;
+      }
+
+      .we_deliver {
+        font-size: 18.416px;
+        font-family: "Exo";
+        color: rgb(255, 255, 255);
+        line-height: 1.5;
+        text-align: left;
+        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+      }
+    }
+
+    .slide3 {
+
+      .row {
+        background-image: url(../images/rectangle_1.png);
+        background-repeat: no-repeat;
+        background-position: 0% 100%;
+        background-size: 100% 95%;
+        margin: 10px 0;
+      }
+
+      .our_main_service {
+        font-size: 18.416px;
+        font-family: "Myriad Pro";
+        color: rgb(255, 255, 255);
+        line-height: 1.5;
+        text-align: center;
+        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+      }
+
+    }
+
+    .slide4 {
+      .we_shoulder {
+        padding: 15px 10px;
+        clear: both;
+        font-size: 18.416px;
+        font-family: "Myriad Pro";
+        color: rgb(255, 255, 255);
+        line-height: 1.5;
+        text-align: center;
+        -moz-transform: matrix( 1.07853071230185,0,0,1.08514501832789,0,0);
+        -webkit-transform: matrix( 1.07853071230185,0,0,1.08514501832789,0,0);
+        -ms-transform: matrix( 1.07853071230185,0,0,1.08514501832789,0,0);
+      }
+
+    }
+
+    .slide5 {
+
+      .bottom_shadow {
+        position: absolute;
+        bottom: 0px;
+        right: 8%;
+        left: 8%;
+        background-image: -moz-linear-gradient( 90deg, rgb(11,28,36) 0%, rgba(2,3,7,0) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(11,28,36) 0%, rgba(2,3,7,0) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(11,28,36) 0%, rgba(2,3,7,0) 100%);
+      }
+      .hit-image {
+        position: absolute;
+        bottom: 0;
+        top: 3%;
+        right: 8%;
+        left: 8%;
+        overflow: hidden;
+        .inside-image {
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+      }
+      .inside-image {
+        position: absolute;
+        width: 54%;
+        left: 23%;
+        bottom: 0px;
+      }
+      .image-description {
+        margin-top: 5px;
+        font-size: 20.257px;
+        font-family: "Exo";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+      }
+
+      .startups-rect {
+        position: relative;
+       // overflow: hidden;
+      }
+    }
+  .slide6, .slide7, .slide8 {
+    .hit-image, .mas-image, .wf-image {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
+
+    .hit-image {
+      background-image: url(../images/Slide6.png);
+    }
+
+    .mas-image {
+      background-image: url(../images/massajor.jpg);
+    }
+
+    .wf-image {
+      background-image: url(../images/Slide8.png);
+    }
+
+    .hit-header, .mas-header, .wf-header {
+      > span {
+        font-size: 25.782px;
+        font-family: "Exo";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: left;
+        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+      }
+    }
+
+    .technologies {
+      margin-top: 30px;
+      font-size: 25.782px;
+      font-family: "Myriad Pro";
+      color: rgb(255, 255, 255);
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: left;
+      -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+      -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+      -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+    }
+
+    .hit-description, .mas-description, .wf-description {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .slide-description-hit, .slide-description-mas, .slide-description-wf {
+      font-size: 18.416px;
+      font-family: "Myriad Pro";
+      color: rgb(255, 255, 255);
+      line-height: 1.5;
+      text-align: left;
+      -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+      -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+      -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+    }
+  }
+
+    .tech-key {
+      &:before {
+        display: inline-block;
+        height: 7px;
+        top: 50%;
+        position: relative;
+        width: 7px;
+        background-color: #41b6e6;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg) translateY(-50%);
+        margin-right: 10px;
+        content: ' ';
+      }
+    }
+
+    .slide9 {
+      margin: 10px 50px;
+      .row {
+        .dot {
+          left: 0.8%;
+          display: inline-block;
+          height: 7px;
+          top: 50%;
+          position: absolute;
+          width: 7px;
+          background-color: #41b6e6;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg) translateY(-50%);
+          margin-right: 10px;
+          content: ' ';
+        }
+        margin: 20px auto;
+        padding: 30px 0;
+        background-image: url(../images/focus-row.png);
+        background-repeat: no-repeat;
+        background-position: 0% 100%;
+        background-size: 100% 100%;
+        font-size: 24px;
+        font-family: "Myriad Pro";
+        color: rgb(255, 255, 255);
+        line-height: 1;
+        text-align: center;
+        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720475274,0,0);
+        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720475274,0,0);
+        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720475274,0,0);
+      }
+
+    }
+
+    .slide10 {
+      .row {
+        padding: 30px 10px;
+        font-size: 24px;
+        margin: 50px auto;
+        font-family: "Myriad Pro";
+        color: rgb(255, 255, 255);
+        line-height: 1.385;
+        text-align: center;
+        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+      }
+      .contacts-info {
+        width: 100%;
+        .contacts-key {
+          font-size: 22px;
+          font-family: "Exo";
+          color: rgba(255, 255, 255, 0.2);
+          font-weight: bold;
+          text-transform: uppercase;
+          line-height: 1;
+          text-align: left;
+          -moz-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+          -webkit-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+          -ms-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+        }
+        .contacts-val {
+          font-size: 22px;
+          font-family: "Exo";
+          color: rgb(255, 255, 255);
+          text-transform: uppercase;
+          line-height: 1;
+          text-align: left;
+          -moz-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+          -webkit-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+          -ms-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+        }
+
+
+      }
+      .contacts-maksym {
+        text-align: left;
+        hr {
+          position: absolute;
+          width: 50vw;
+          left: 0px;
+          top: 1.5em;
+          border: 1px solid #41b6e6;
+        }
+      }
+      .contacts-daniel {
+        text-align: right;
+        hr {
+          position: absolute;
+          width: 50vw;
+          right: 0px;
+          top: 1.5em;
+          border: 1px solid #41b6e6;
+        }
+      }
+      .contacts-daniel, .contacts-maksym {
+        img {
+          max-height: 100%;
+          max-width: 100%;
+        }
+        position: relative;
+        .name {
+          font-size: 33.705px;
+          font-family: "Myriad Pro";
+          color: rgb(255, 255, 255);
+          text-transform: uppercase;
+          line-height: 1.2;
+          -moz-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+          -webkit-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+          -ms-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+        }
+        .profession {
+          font-size: 22px;
+          font-family: "Myriad Pro";
+          color: rgb(72, 174, 217);
+          text-transform: uppercase;
+          line-height: 1.2;
+          -moz-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+          -webkit-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+          -ms-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+        }
+      }
+    }
+
   }
   .footer {
     height: 30px;

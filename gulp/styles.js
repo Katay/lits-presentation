@@ -19,7 +19,7 @@ module.exports = function (production) {
             var paths = [].concat(vendors).concat(srcDir);
             return gulp.src(paths)
                 .pipe(gulpif(!production, sourcemaps.init()))
-                .pipe(sass())
+                .pipe(sass().on('error', sass.logError))
                 .pipe(autoprefixer({
                     browsers: ['last 6 versions'],
                     cascade: false
