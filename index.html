@@ -6,35 +6,46 @@
     <title></title>
 </head>
 <body>
-<header class="header">
-    <img src="dist/images/Logo.png" alt="">
+<div class="background"></div>
+<header class="header expanded">
+    <img src="dist/images/header-logo.png" alt="">
     <button class="navbar-toggle glyphicon glyphicon-menu-hamburger"></button><ul id="menu" class="nav dropdown-menu">
-    <li><a data-slide="1" href="#home">Home</a></li>
-    <li><a data-slide="2" href="#who_is">Who is litslink</a></li>
-    <li><a data-slide="3" href="#our_services">Our Services</a></li>
-    <li><a data-slide="4" href="#our_tech">Our core tech</a></li>
-    <li><a data-slide="5" href="#our_startups">Startups we developed</a></li>
-    <li><a data-slide="6" href="#why_litslink">Why litslink</a></li>
-    <li><a data-slide="7" href="#contact_us">Contact us</a></li>
+    <li data-menuanchor="#home"><a href="#home">Home</a></li>
+    <li data-menuanchor="#who_is"><a data-slide="2" href="#who_is">Who is litslink</a></li>
+    <li data-menuanchor="#our_services"><a data-slide="3" href="#our_services">Our Services</a></li>
+    <li data-menuanchor="#our_tech"><a data-slide="4" href="#our_tech">Our core tech</a></li>
+    <li data-menuanchor="#our_startups"><a data-slide="5" href="#our_startups">Startups we developed</a></li>
+    <li data-menuanchor="#why_litslink"><a data-slide="6" href="#why_litslink">Why litslink</a></li>
+    <li data-menuanchor="#contact_us"><a data-slide="7" href="#contact_us">Contact us</a></li>
 </ul></header>
 <div id="fullpage">
 
     <div class="section container slide1"></div>
 
     <div class="section container slide2">
-        <p class="slide-title">Who is litslink</p>
+        <p class="slide-title"><span>Who is litslink</span></p>
         <div class="col-xs-12 col-sm-12 col-lg-4">
+          <!--  <div class="sw"></div>
+            <div class="se"></div>
+            <div class="nw"></div>
+            <div class="ne"></div>
+            <div class="s"></div>
+            <div class="w"></div>
+            <div class="n"></div>
+            <div class="e"></div>-->
             <p class="the_concept">The concept</p>
             <div class="we_deliver">
                 We deliver top-notch solutions for ambitious startups, effectively bridging US management with Ukrainian devteam.
                 Our expertise spans across full range of web and software development, sales, legal and marketing, allowing us to facilitate and improve projects, which we believe in
             </div>
         </div>
-        <div class="slide2-map col-xs-12 col-sm-12 col-lg-8"></div>
+        <div class="s col-xs-12 col-sm-12 col-lg-8">
+            <img src="dist/images/w.jpg" class="slide2-map" alt="">
+        </div>
     </div>
 
     <div class="section container slide3">
-        <p class="slide-title">Our Services</p>
+        <p class="slide-title"><span>Our Services</span></p>
     <div class="row">
         <p class="our_main_service">
             <span>Our main service is to transform a good idea into a promising "seed“ via fast and reliable development.</span>
@@ -80,50 +91,48 @@
     </div>
 
     <div class="section container slide4">
-        <p class="slide-title">Our Core Tech</p>
+        <p class="slide-title"><span>Our Core Tech</span></p>
         <div class="row">
             <p class="we_shoulder">
                 <span>We shoulder both front-end and back-end development to create turnkey solutions and solid MVPs.</span>
             </p>
-            <div class="col-xs-6 col-sm-2 col-lg-2">
+            <div class="col-xs-6 col-sm-2 col-lg-2 tech-icon">
                 <img src="dist/images/Android_robot.png" alt="">
                 <p class="slide-description">android</p>
             </div>
-            <div class="col-xs-6 col-sm-3 col-lg-3">
+            <div class="col-xs-6 col-sm-3 col-lg-3 tech-icon">
                 <img src="dist/images/HTML5_logo_and_wordmark.png" alt="">
                 <p class="slide-description">html5/css3</p>
             </div>
-            <div class="col-xs-6 col-sm-2 col-lg-2">
+            <div class="col-xs-6 col-sm-2 col-lg-2 tech-icon">
                 <img src="dist/images/Node.js_logo.png" alt="">
                 <p class="slide-description">nodejs</p>
             </div>
-            <div class="col-xs-6 col-sm-3 col-lg-3">
+            <div class="col-xs-6 col-sm-3 col-lg-3 tech-icon">
                 <img src="dist/images/webRTC.png" alt="">
                 <p class="slide-description">webrtc</p>
             </div>
-            <div class="col-xs-12 col-sm-2 col-lg-2">
+            <div class="col-xs-6 col-sm-2 col-lg-2 tech-icon">
                 <img src="dist/images/Arduino.png" alt="">
                 <p class="slide-description">embeded c</p>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6 col-sm-2 col-lg-2">
+            <div class="col-xs-6 col-sm-2 col-lg-2 tech-icon">
                 <img src="dist/images/Apple-logo.png" alt="">
                 <p class="slide-description">ios</p>
             </div>
-            <div class="col-xs-6 col-sm-3 col-lg-3">
+            <div class="col-xs-6 col-sm-3 col-lg-3 tech-icon">
                 <img src="dist/images/ruby-on-rails-logo.png" alt="">
                 <p class="slide-description">ruby on rails</p>
             </div>
-            <div class="col-xs-6 col-sm-2 col-lg-2">
+            <div class="col-xs-6 col-sm-2 col-lg-2 tech-icon">
                 <img src="dist/images/emberjs-logo.png" alt="">
                 <p class="slide-description">emberjs</p>
             </div>
-            <div class="col-xs-6 col-sm-3 col-lg-3">
+            <div class="col-xs-6 col-sm-3 col-lg-3 tech-icon">
                 <img src="dist/images/PhoneGap.png" alt="">
                 <p class="slide-description">phonegap</p>
             </div>
-            <div class="col-xs-12 col-sm-2 col-lg-2">
+            <div class="col-xs-6 col-sm-2 col-lg-2 tech-icon">
                 <img src="dist/images/add_database.png" alt="">
                 <p class="slide-description">sql+nosql</p>
             </div>
@@ -134,28 +143,23 @@
     </div>
 
     <div class="section container slide5">
-        <p class="slide-title">Startups we developed</p>
-        <div class="col-xs-12 col-sm-4 col-lg-4 startups-rect">
-            <img src="dist/images/rectangle2.png" alt="">
-            <img class="inside-image" src="dist/images/mass.png" alt="">
+        <p class="slide-title"><span>Startups we developed</span></p>
+        <div class="col-xs-4 col-sm-4 col-lg-4 startups-rect">
+            <img class="inside-image" src="dist/images/mas-preview.png" alt="">
             <div class="bottom_shadow">
                 <img src="dist/images/massajor_logo.png" alt="">
                 <p class="image-description">massajor</p>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-4 col-lg-4 startups-rect">
-            <img src="dist/images/rectangle2.png" alt="">
-            <div class="hit-image">
-                <img class="inside-image" src="dist/images/hit2.png" alt="">
-            </div>
+        <div class="col-xs-4 col-sm-4 col-lg-4 startups-rect hit-rect">
+            <img class="inside-image" src="dist/images/hit-preview.png" alt="">
             <div class="bottom_shadow">
                 <img src="dist/images/hit_logo.png" alt="">
                 <p class="image-description">hit system</p>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-4 col-lg-4 startups-rect">
-            <img src="dist/images/rectangle2.png" alt="">
-            <img class="inside-image" src="dist/images/wf.png" alt="">
+        <div class="col-xs-4 col-sm-4 col-lg-4 startups-rect">
+            <img class="inside-image" src="dist/images/wf-preview.png" alt="">
             <div class="bottom_shadow">
                 <img src="dist/images/wow-foto_logo.png" alt="">
                 <p class="image-description">wow-foto</p>
@@ -164,9 +168,11 @@
     </div>
 
     <div class="section slide6">
-        <p class="slide-title">Success stories</p>
-        <div class="col-xs-12 col-sm-6 col-lg-6 hit-image"></div>
-        <div class="col-xs-12 col-sm-4 col-lg-5 hit-description">
+        <p class="slide-title"><span>Success stories</span></p>
+        <div class="col-xs-6 col-sm-6 col-lg-6">
+            <img src="dist/images/Slide6.png" class="hit-image" />
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-5 hit-description">
             <p class="hit-header">
                 <img src="dist/images/hit_logo.png" alt="">
             <span class="image-description">hit system</span>
@@ -187,8 +193,10 @@
     </div>
 
     <div class="section slide7">
-        <div class="col-xs-12 col-sm-6 col-lg-6 mas-image"></div>
-        <div class="col-xs-12 col-sm-4 col-lg-5 mas-description">
+        <div class="col-xs-4 col-sm-6 col-lg-6">
+            <img src="dist/images/massajor.jpg" alt="" class="mas-image">
+        </div>
+        <div class="col-xs-8 col-sm-6 col-lg-6 mas-description">
             <p class="mas-header">
                 <img src="dist/images/massajor_logo.png" alt="">
                 <span class="image-description">massajor</span>
@@ -209,8 +217,10 @@
     </div>
 
     <div class="section slide8">
-        <div class="col-xs-12 col-sm-6 col-lg-6 wf-image"></div>
-        <div class="col-xs-12 col-sm-4 col-lg-5 wf-description">
+        <div class="col-xs-5 col-sm-6 col-lg-6">
+            <img src="dist/images/Slide8.png" class="wf-image" alt="">
+        </div>
+        <div class="col-xs-7 col-sm-4 col-lg-5 wf-description">
             <p class="wf-header">
                 <img src="dist/images/wow-foto_logo.png" alt="">
                 <span class="image-description">wow-foto</span>
@@ -233,7 +243,7 @@
     </div>
 
     <div class="section slide9">
-        <p class="slide-title">reasons to choose litslink</p>
+        <p class="slide-title"><span>reasons to choose litslink</span></p>
         <div class="row">
             <i class="dot"> </i>
             <span>We have successful startups in the profile, so we have worked our way from ground up.</span>
@@ -253,14 +263,14 @@
     </div>
 
     <div class="section container slide10">
-        <p class="slide-title">Contact us</p>
+        <p class="slide-title"><span>Contact us</span></p>
         <div class="row">
             <p>With a set of project in our hand, we look confidently to the future.
                 We are dedicated people ready to support interesting projects and committed people.
                 If you are such people, don't hesitate to contact us.</p>
             </div>
-        <div class="col-xs-12 col-sm-6 col-lg-6 contacts-daniel">
-            <div class="col-md-8">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 contacts-daniel">
+            <div class="col-xs-8">
                 <p class="name">Daniel Lee</p>
                 <hr>
                 <p class="profession">Senior Sales Executive</p>
@@ -286,15 +296,15 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-md-4">
+            <div class="col-xs-4">
                 <img src="dist/images/daniel.png" alt="">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-lg-6 contacts-maksym">
-            <div class="col-md-4">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 contacts-maksym">
+            <div class="col-xs-4">
                 <img src="dist/images/maksym.png" alt="">
             </div>
-            <div class="col-md-8">
+            <div class="col-xs-8">
                 <p class="name">Maksym Vorobiov</p>
                 <hr>
                 <p class="profession">Director of Engineering</p>
