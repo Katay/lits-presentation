@@ -7,7 +7,7 @@ $(document).on('ready', function () {
         menu: '#menu',
         paddingTop: 100,
         paddingBottom: 30,
-        responsiveHeight: 750,
+        responsiveHeight: 700,
         afterLoad: function (anchorLink) {
             showHeader(anchorLink === 'home')
         },
@@ -16,9 +16,10 @@ $(document).on('ready', function () {
         fixedElements: '.header, .footer'
     });
     $('button.navbar-toggle').on('click', function () {
-        menu.toggleClass('menu-visible');
+        //menu.toggleClass('menu-visible');
     });
     function showHeader (show) {
+        return
         if (show) {
             header.addClass('expanded');
         } else {

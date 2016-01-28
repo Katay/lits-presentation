@@ -10,24 +10,35 @@ $broken-border: none;
 }
 
 html {
-  font-size: 14px;
+  font-size: 10px;
+  @media (device-pixel-ratio: 2) {
+    font-size: 15px;
+  }
 }
 
 body {
- // overflow-x: hidden !important;
+  overflow-x: hidden !important;
  // font-size: 2vmin;
-  font-size: 8px;
+  @media (max-width: 600px) {
+    font-size: 0.8em;
+  }
   @media (min-width: 600px) {
-    font-size: 10px;
+    font-size: 1em;
   }
   @media (min-width: 800px) {
-    font-size: 12px;
+    font-size: 1.2em;
   }
   @media (min-width: 1000px) {
-    font-size: 14px;
+    font-size: 1.4em;
   }
   @media (min-width: 1200px) {
-    font-size: 16px;
+    font-size: 1.6em;
+  }
+  @media (min-width: 1600px) {
+    font-size: 1.8em;
+  }
+  @media (min-width: 1400px) {
+    font-size: 2em;
   }
   .background {
     position:fixed;
@@ -51,15 +62,25 @@ body {
     top: 0;
     right: 0;
     left: 0;
-    overflow: hidden;
     .header-logo {
       max-width: 100%;
+      cursor: pointer;
     }
     .navbar-toggle {
-      display: inline-block !important;
+      display: none;
+      //display: inline-block !important;
       border-color: #3cf;
       transition: all 375ms ease-in;
     }
+
+    &:hover {
+      #menu {
+        width: 100%;
+        text-align: center;
+        display: block;
+      }
+    }
+
     #menu {
       margin-top: 0;
       padding: 0;
@@ -86,14 +107,8 @@ body {
     text-align: center;
     vertical-align: middle;
     .fp-tableCell {
-      top: 50%;
-      position: relative;
-      transform: translateY(-50%);
-      @media screen and (max-height: 750px) {
-        top: auto;
-        transform: translateY(0);
+      @media screen and (max-height: 700px) {
         height: auto !important;
-        display: inline-block;
       }
     }
 
@@ -101,7 +116,7 @@ body {
       clear: both;
       background-repeat: no-repeat;
       background-size: contain;
-      @media screen and (max-height: 750px) {
+      @media screen and (max-height: 700px) {
         height: auto !important;
         padding-left: 30px;
         padding-right: 10px;
@@ -132,7 +147,7 @@ body {
             left: 0;
             width: 100vw;
             bottom: 0;
-          //  content: ' ';
+            content: ' ';
           }
       }
         margin-bottom: 20px;
@@ -448,7 +463,7 @@ body {
       .row {
         padding: 30px 10px;
         font-size: 1.7em;
-        margin: 50px auto;
+        margin: 40px auto;
         font-family: "Myriad Pro";
         color: rgb(255, 255, 255);
         line-height: 1.385;
@@ -457,7 +472,7 @@ body {
       }
       .contacts-info {
         width: 100%;
-        font-size: 0.85em;
+        font-size: 0.8em;
         .contacts-key {
           font-size: 1.57em;
           font-family: "Exo";
@@ -484,8 +499,8 @@ body {
         text-align: left;
         hr {
           position: absolute;
-          display: none;
-          width: 50vw;
+          //display: none;
+          width: 100vw;
           left: 0px;
           top: 1.5em;
           border: 1px solid #41b6e6;
@@ -495,8 +510,8 @@ body {
         text-align: right;
         hr {
           position: absolute;
-          display: none;
-          width: 50vw;
+          //display: none;
+          width: 100vw;
           right: 0px;
           top: 1.5em;
           border: 1px solid #41b6e6;
@@ -539,4 +554,8 @@ body {
     padding: 0 20px;
     color: #fff;
   }
+}
+
+.section {
+  width: 100%;
 }
