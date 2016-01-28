@@ -10,7 +10,7 @@ var srcDir = './src/javascripts/**/*.js',
 
         "./node_modules/fullpage.js/jquery.fullPage.js"
     ],
-    destDir = './dist/javascripts';
+    destDir = 'public/dist/javascripts';
 module.exports = function (production) {
     return {
         task: function () {

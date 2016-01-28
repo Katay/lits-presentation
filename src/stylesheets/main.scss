@@ -14,8 +14,21 @@ html {
 }
 
 body {
-  //overflow-x: hidden !important;
-  font-size: 2vmin;
+ // overflow-x: hidden !important;
+ // font-size: 2vmin;
+  font-size: 8px;
+  @media (min-width: 600px) {
+    font-size: 10px;
+  }
+  @media (min-width: 800px) {
+    font-size: 12px;
+  }
+  @media (min-width: 1000px) {
+    font-size: 14px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 16px;
+  }
   .background {
     position:fixed;
     top: 0;
@@ -39,6 +52,9 @@ body {
     right: 0;
     left: 0;
     overflow: hidden;
+    .header-logo {
+      max-width: 100%;
+    }
     .navbar-toggle {
       display: inline-block !important;
       border-color: #3cf;
@@ -69,9 +85,13 @@ body {
   #fullpage {
     text-align: center;
     vertical-align: middle;
-
     .fp-tableCell {
+      top: 50%;
+      position: relative;
+      transform: translateY(-50%);
       @media screen and (max-height: 750px) {
+        top: auto;
+        transform: translateY(0);
         height: auto !important;
         display: inline-block;
       }
@@ -81,11 +101,14 @@ body {
       clear: both;
       background-repeat: no-repeat;
       background-size: contain;
-
       @media screen and (max-height: 750px) {
         height: auto !important;
         padding-left: 30px;
         padding-right: 10px;
+      }
+
+      .logo-icon {
+        width: 3em;
       }
 
       .slide-description {
@@ -96,9 +119,7 @@ body {
         text-transform: uppercase;
         line-height: 1.2;
         text-align: center;
-        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
       }
 
       .slide-title {
@@ -111,7 +132,7 @@ body {
             left: 0;
             width: 100vw;
             bottom: 0;
-            content: ' ';
+          //  content: ' ';
           }
       }
         margin-bottom: 20px;
@@ -122,16 +143,15 @@ body {
         font-weight: bold;
         text-transform: uppercase;
         line-height: 1.2;
-        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
       }
 
 
     }
     .slide1 {
-      background-image: url(../images/Slide1.png);
-      background-position: 50% 50%;
+      img {
+        max-width: 100%;
+      }
     }
 
     .slide2 {
@@ -206,9 +226,7 @@ body {
         text-transform: uppercase;
         line-height: 1.2;
         text-align: left;
-        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
         margin-bottom: 60px;
       }
 
@@ -218,9 +236,7 @@ body {
         color: rgb(255, 255, 255);
         line-height: 1.5;
         text-align: left;
-        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
       }
     }
 
@@ -240,9 +256,7 @@ body {
         color: rgb(255, 255, 255);
         line-height: 1.5;
         text-align: center;
-        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
       }
 
     }
@@ -273,9 +287,7 @@ body {
         color: rgb(255, 255, 255);
         line-height: 1.5;
         text-align: center;
-        -moz-transform: matrix( 1.07853071230185,0,0,1.08514501832789,0,0);
-        -webkit-transform: matrix( 1.07853071230185,0,0,1.08514501832789,0,0);
-        -ms-transform: matrix( 1.07853071230185,0,0,1.08514501832789,0,0);
+        //transform: matrix( 1.07853071230185,0,0,1.08514501832789,0,0);
       }
 
     }
@@ -316,9 +328,7 @@ body {
         text-transform: uppercase;
         line-height: 1.2;
         text-align: center;
-        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
       }
 
       .startups-rect {
@@ -332,6 +342,7 @@ body {
   .slide6, .slide7, .slide8 {
     .hit-image, .mas-image, .wf-image {
       width: 100%;
+      padding: 20px;
     }
 
     .hit-image {
@@ -352,9 +363,7 @@ body {
         text-transform: uppercase;
         line-height: 1.2;
         text-align: left;
-        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
       }
     }
 
@@ -366,9 +375,7 @@ body {
       text-transform: uppercase;
       line-height: 1.2;
       text-align: left;
-      -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-      -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-      -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+      //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
     }
 
     .hit-description, .mas-description, .wf-description {
@@ -383,9 +390,7 @@ body {
       color: rgb(255, 255, 255);
       line-height: 1.5;
       text-align: left;
-      -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-      -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-      -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+      //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
     }
   }
 
@@ -408,6 +413,7 @@ body {
     .slide9 {
       margin: 10px 50px;
       .row {
+        position: relative;
         .dot {
           left: 0.8%;
           display: inline-block;
@@ -423,7 +429,7 @@ body {
           content: ' ';
         }
         margin: 20px auto;
-        padding: 30px 0;
+        padding: 30px 20px;
         background-image: url(../images/focus-row.png);
         background-repeat: no-repeat;
         background-position: 0% 100%;
@@ -433,9 +439,7 @@ body {
         color: rgb(255, 255, 255);
         line-height: 1;
         text-align: center;
-        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720475274,0,0);
-        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720475274,0,0);
-        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720475274,0,0);
+        //transform: matrix( 1.07853071230185,0,0,1.08602720475274,0,0);
       }
 
     }
@@ -449,12 +453,11 @@ body {
         color: rgb(255, 255, 255);
         line-height: 1.385;
         text-align: center;
-        -moz-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -webkit-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        -ms-transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+        //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
       }
       .contacts-info {
         width: 100%;
+        font-size: 0.85em;
         .contacts-key {
           font-size: 1.57em;
           font-family: "Exo";
@@ -463,9 +466,7 @@ body {
           text-transform: uppercase;
           line-height: 1;
           text-align: left;
-          -moz-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
-          -webkit-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
-          -ms-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+          //transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
         }
         .contacts-val {
           font-size: 1.57em;
@@ -474,9 +475,7 @@ body {
           text-transform: uppercase;
           line-height: 1;
           text-align: left;
-          -moz-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
-          -webkit-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
-          -ms-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+          //transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
         }
 
 
@@ -485,6 +484,7 @@ body {
         text-align: left;
         hr {
           position: absolute;
+          display: none;
           width: 50vw;
           left: 0px;
           top: 1.5em;
@@ -495,6 +495,7 @@ body {
         text-align: right;
         hr {
           position: absolute;
+          display: none;
           width: 50vw;
           right: 0px;
           top: 1.5em;
@@ -509,14 +510,12 @@ body {
         }
         position: relative;
         .name {
-          font-size: 2.41em;
+          font-size: 2.3em;
           font-family: "Myriad Pro";
           color: rgb(255, 255, 255);
           text-transform: uppercase;
           line-height: 1.2;
-          -moz-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
-          -webkit-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
-          -ms-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+          //transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
         }
         .profession {
           font-size: 1.57em;
@@ -524,9 +523,7 @@ body {
           color: rgb(72, 174, 217);
           text-transform: uppercase;
           line-height: 1.2;
-          -moz-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
-          -webkit-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
-          -ms-transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
+          //transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
         }
       }
     }

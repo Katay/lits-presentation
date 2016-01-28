@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     jpegoptim = require('imagemin-jpeg-recompress'),
     gifsicle = require('imagemin-gifsicle'),
     srcDir = ['./src/images/**'],
-    destDir = './dist/images';
+    destDir = 'public/dist/images';
 module.exports = {
     task: function () {
         return gulp.src(srcDir)

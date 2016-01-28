@@ -12,7 +12,7 @@ var vendors = [
     "./node_modules/bootstrap/dist/css/bootstrap-theme.css"
     //'public/vendors/font-awesome/css/font-awesome.css'
      ];
-var destDir = './dist/stylesheets';
+var destDir = 'public/dist/stylesheets';
 module.exports = function (production) {
     return {
         task: function () {

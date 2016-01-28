@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "gulp js sass images fonts",
-    "dev": "gulp watch"
+    "start": "gulp js sass images fonts --production=true",
+    "dev": "gulp watch",
+    "staging": "fly staging"
   },
   "dependencies": {
     "del": "^2.0.2",

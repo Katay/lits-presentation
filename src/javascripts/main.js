@@ -9,7 +9,7 @@ $(document).on('ready', function () {
         paddingBottom: 30,
         responsiveHeight: 750,
         afterLoad: function (anchorLink) {
-            showHeader(anchorLink !== 'home')
+            showHeader(anchorLink === 'home')
         },
         //scrollBar: true,
         //resize: true,
