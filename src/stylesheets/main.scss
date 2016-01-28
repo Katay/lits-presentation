@@ -15,15 +15,78 @@ html {
     font-size: 15px;
   }
 }
-
-body {
+body, html {
   overflow-x: hidden !important;
+}
+body {
+
+  @media (max-height: 768px) {
+    header {
+      height: auto !important;
+    }
+    .background {
+      //top: 0 !important;
+    }
+    .page-title {
+      display: none !important;
+    }
+    .slide-title {
+      display: block !important;
+    }
+  }
+
+  &.no-text {
+    .page-title {
+      z-index: 10px;
+      display: none;
+    }
+    header {
+      height: 150px;
+    }
+    .background {
+     // top: 150px;
+    }
+  }
+
+  .page-title {
+    width: 100%;
+    & > span{
+      position: relative;
+      &:after {
+        border-bottom: 2px solid #4186E6;
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        width: 100vw;
+        bottom: 0;
+        content: ' ';
+      }
+    }
+    position: fixed;
+    top: 170px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2.29em;
+    font-family: "Exo";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
+  }
+
  // font-size: 2vmin;
-  @media (max-width: 600px) {
+  @media (max-width: 400px) {
     font-size: 0.8em;
   }
-  @media (min-width: 600px) {
+  @media (max-width: 500px) {
+    font-size: 0.9em;
+  }
+  @media (min-width: 500px) {
     font-size: 1em;
+  }
+  @media (min-width: 600px) {
+    font-size: 1.1em;
   }
   @media (min-width: 800px) {
     font-size: 1.2em;
@@ -42,29 +105,46 @@ body {
   }
   .background {
     position:fixed;
-    top: 0;
+    top: 230px;
     bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
   }
   .header {
-    transition: height .5s linear;
-    height: 10px;
+   // transition: height .5s linear;
+    height: 230px;
+    //background-image: url(../images/background.png);
+    //background-repeat: no-repeat;
+    //background-size: 100% auto;
+    //background-position: 50% 0%;
     &.expanded, &:hover {
-      height: 79px;
+     // max-height: 10%;
+      .header-logo {
+        top: 0px;
+      }
+      //height: 79px;
     }
     text-align: center;
     position: fixed;
-    background-color: rgba(0,0,0,0.5);
+    background-color: transparent;
     top: 0;
     right: 0;
     left: 0;
     .header-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       max-width: 100%;
+     // max-height: 100%;
       cursor: pointer;
+      transition: all .5s linear;
+      top: -60px;
+      height: auto;
     }
     .navbar-toggle {
       display: none;
@@ -74,7 +154,7 @@ body {
     }
 
     &:hover {
-      #menu {
+      #menu1 {
         width: 100%;
         text-align: center;
         display: block;
@@ -107,16 +187,18 @@ body {
     text-align: center;
     vertical-align: middle;
     .fp-tableCell {
-      @media screen and (max-height: 700px) {
+      @media screen and (max-height: 768px) {
         height: auto !important;
+        display: inline-block;
       }
     }
 
     .section {
+      transition: all .3s linear;
       clear: both;
       background-repeat: no-repeat;
       background-size: contain;
-      @media screen and (max-height: 700px) {
+      @media screen and (max-height: 768px) {
         height: auto !important;
         padding-left: 30px;
         padding-right: 10px;
@@ -138,6 +220,7 @@ body {
       }
 
       .slide-title {
+        display: none;
         & > span{
           position: relative;
           &:after {
@@ -242,11 +325,13 @@ body {
         line-height: 1.2;
         text-align: left;
         //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        margin-bottom: 60px;
+        @media (min-width: 768px) {
+          margin-bottom: 60px;
+        }
       }
 
       .we_deliver {
-        font-size: 1.05em;
+        font-size: 1.32em;
         font-family: "Exo";
         color: rgb(255, 255, 255);
         line-height: 1.5;
@@ -257,6 +342,19 @@ body {
 
     .slide3 {
 
+      @media (max-width: 490px) {
+          .col-xs-3 {
+          width: 50%;
+        }
+        img {
+          max-width: 60% !important;
+        }
+      }
+
+      img {
+        max-width: 100%;
+      }
+
       .row {
         background-image: url(../images/rectangle_1.png);
         background-repeat: no-repeat;
@@ -266,7 +364,7 @@ body {
       }
 
       .our_main_service {
-        font-size: 1.05em;
+        font-size: 1.32em;
         font-family: "Myriad Pro";
         color: rgb(255, 255, 255);
         line-height: 1.5;
@@ -280,6 +378,13 @@ body {
       .tech-icon {
         margin: 20px auto;
         height: 120px;
+        @media (max-width: 490px) {
+          margin: 10px auto;
+          height: 80px;
+          > img {
+            max-height: 75% !important;
+          }
+        }
         > img {
           max-height: 100%;
           max-width: 100%;
@@ -426,7 +531,6 @@ body {
     }
 
     .slide9 {
-      margin: 10px 50px;
       .row {
         position: relative;
         .dot {
@@ -468,6 +572,9 @@ body {
         color: rgb(255, 255, 255);
         line-height: 1.385;
         text-align: center;
+        @media (max-width: 420px) {
+          margin: 20px auto;
+        }
         //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
       }
       .contacts-info {
@@ -495,26 +602,24 @@ body {
 
 
       }
+      hr {
+        position: absolute;
+        //display: none;
+        width: 100vw;
+        margin: 0;
+        top: calc(1.7em + 5px);
+        border: 1px solid #41b6e6;
+      }
       .contacts-maksym {
         text-align: left;
         hr {
-          position: absolute;
-          //display: none;
-          width: 100vw;
           left: 0px;
-          top: 1.5em;
-          border: 1px solid #41b6e6;
         }
       }
       .contacts-daniel {
         text-align: right;
         hr {
-          position: absolute;
-          //display: none;
-          width: 100vw;
           right: 0px;
-          top: 1.5em;
-          border: 1px solid #41b6e6;
         }
       }
       .contacts-daniel, .contacts-maksym {
@@ -525,7 +630,7 @@ body {
         }
         position: relative;
         .name {
-          font-size: 2.3em;
+          font-size: 1.7em;
           font-family: "Myriad Pro";
           color: rgb(255, 255, 255);
           text-transform: uppercase;
@@ -533,7 +638,7 @@ body {
           //transform: matrix( 0.81590813744965,0,0,0.81590813744965,0,0);
         }
         .profession {
-          font-size: 1.57em;
+          font-size: 1.3em;
           font-family: "Myriad Pro";
           color: rgb(72, 174, 217);
           text-transform: uppercase;
@@ -545,6 +650,7 @@ body {
 
   }
   .footer {
+    background-color: black;
     width: 100%;
     text-align: center;
     height: 30px;

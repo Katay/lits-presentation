@@ -1,15 +1,43 @@
 $(document).on('ready', function () {
+    var anchors = ['home', 'who_is','our_services', 'our_tech', 'our_startups', 'hit_system', 'massajor', 'wow-foto', 'why_litslink', 'contact_us'];
+    var texts = {
+        home: false,
+        who_is: 'Who is litslink',
+        our_services: 'Our Services',
+        our_tech: 'Our Core Tech',
+        our_startups: 'Startups we developed',
+        hit_system: 'Success stories',
+        massajor: false,
+        'wow-foto': false,
+        why_litslink: 'reasons to choose litslink',
+        contact_us: 'Contact us'
+    };
+    var title = $('.page-title span');
     var menu = $('#menu'),
         header = $('.header'),
-        $window = $(window);
-    $('#fullpage').fullpage({
-        anchors: ['home', 'who_is','our_services', 'our_tech', 'our_startups', 'hit_system', 'massajor', 'wow-foto', 'why_litslink', 'contact_us'],
+        background = $('.background'),
+        $window = $(window),
+        $body = $('body'),
+        fpage = $('#fullpage');
+    fpage.fullpage({
+        anchors: anchors,
         menu: '#menu',
-        paddingTop: 100,
+        paddingTop: 250,
         paddingBottom: 30,
-        responsiveHeight: 700,
+        responsiveHeight: 750,
         afterLoad: function (anchorLink) {
-            showHeader(anchorLink === 'home')
+            var section = $(this);
+            showHeader(anchorLink === 'home');
+            var text = texts[anchorLink];
+            if (text) {
+                title.text(text);
+                $body.removeClass('no-text');
+               // title.removeClass('invisible');
+            } else {
+                $body.addClass('no-text');
+                //title.addClass('invisible');
+                section.css('padding-top', '150px');
+            }
         },
         //scrollBar: true,
         //resize: true,
@@ -19,7 +47,6 @@ $(document).on('ready', function () {
         //menu.toggleClass('menu-visible');
     });
     function showHeader (show) {
-        return
         if (show) {
             header.addClass('expanded');
         } else {
