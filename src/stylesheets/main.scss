@@ -5,6 +5,8 @@ $header-no-text: 15vh;
 $background-no-text: -15vh;
 $page-title-position: calc(30vh - 1.5em);
 $scrolling-speed: 700ms;
+$responsive-height: 580px;
+
 @font-face {
   font-family: "Exo";
   src: url(../fonts/Exo-Regular.otf);
@@ -125,7 +127,7 @@ body {
     right: 0;
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
-    background-size: auto 100vh;
+    background-size: 100vw 100vh;
     background-position: 50% $background-pos;
   }
   .header {
@@ -133,9 +135,10 @@ body {
     height: $header-height;
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
-    background-size: auto 100vh;
+    background-size: 100vw 100vh;
     background-position: 50% 0%;
     &.expanded {}
+    z-index: 0;
     &.below {
       z-index: -1;
     }
@@ -200,7 +203,7 @@ body {
     text-align: center;
     vertical-align: middle;
     .fp-tableCell {
-      @media screen and (max-height: 768px) {
+      @media screen and (max-height: $responsive-height) {
         height: auto !important;
         display: inline-block;
       }
@@ -214,7 +217,7 @@ body {
       clear: both;
       background-repeat: no-repeat;
       background-size: contain;
-      @media screen and (max-height: 768px) {
+      @media screen and (max-height: $responsive-height) {
         height: auto !important;
         padding-left: 30px;
         padding-right: 10px;
@@ -341,7 +344,7 @@ body {
         line-height: 1.2;
         text-align: left;
         //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
-        @media (min-width: 768px) {
+        @media (min-width: $responsive-height) {
           margin-bottom: 60px;
         }
       }

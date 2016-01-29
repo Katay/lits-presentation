@@ -26,7 +26,7 @@ $(document).on('ready', function () {
         paddingTop: '30vh',
         paddingBottom: 30,
         scrollingSpeed: scrollingTime,
-        responsiveHeight: 750,
+        responsiveHeight: 580,
         afterLoad: function (anchorLink) {
 //            showHeader(anchorLink === 'home');
             var text = texts[anchorLink];
@@ -47,7 +47,7 @@ $(document).on('ready', function () {
             }
             if (selector === '.slide5') {
                 if (direction === 'down') {
-                    time = 0;
+                    time = scrollingTime*0.85;
                 } else {
                     time = scrollingTime
                 }
@@ -55,7 +55,7 @@ $(document).on('ready', function () {
                     header.addClass('below');
                 }, time);
             } else {
-                header.removeClass('below')
+                header.removeClass('below');
             }
         },
         fixedElements: '.header, .footer'
