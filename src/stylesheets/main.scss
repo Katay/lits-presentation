@@ -1,5 +1,10 @@
 $broken-border: none;
-
+$header-height: 30vh;
+$background-pos: -30vh;
+$header-no-text: 15vh;
+$background-no-text: -15vh;
+$page-title-position: calc(30vh - 1.5em);
+$scrolling-speed: 700ms;
 @font-face {
   font-family: "Exo";
   src: url(../fonts/Exo-Regular.otf);
@@ -27,7 +32,7 @@ body {
     .background {
       top: 0 !important;
       background-size: cover;
-      background-position: 50% 0;
+      background-position: 50% 0 !important;
     }
     .page-title {
       display: none !important;
@@ -39,23 +44,27 @@ body {
 
   &.no-text {
     .page-title {
-      z-index: 10px;
-      display: none;
+      right: -100%
     }
     header {
-      height: 150px;
+      height: $header-no-text;
     }
     .background {
-      top: 150px;
-      background-position: 50% -150px;
+      top: $header-no-text;
+      background-position: 50% $background-no-text;
     }
   }
 
   .page-title {
+    transition: all $scrolling-speed linear;
     width: 100%;
-    & > span{
+    right: 0;
+    & > span {
+      transition: all $scrolling-speed linear;
+      white-space: pre;
       position: relative;
       &:after {
+        transition: all $scrolling-speed linear;
         border-bottom: 2px solid #4186E6;
         position: absolute;
         display: inline-block;
@@ -66,7 +75,7 @@ body {
       }
     }
     position: fixed;
-    top: 170px;
+    top: $page-title-position;
     margin-bottom: 20px;
     text-align: center;
     font-size: 2.29em;
@@ -107,8 +116,9 @@ body {
     font-size: 2em;
   }
   .background {
+    transition: all $scrolling-speed linear;
     position:fixed;
-    top: 230px;
+    top: $header-height;
     bottom: 0;
     //top: 0;
     left: 0;
@@ -116,21 +126,18 @@ body {
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
     background-size: auto 100vh;
-    background-position: 50% -230px;
+    background-position: 50% $background-pos;
   }
   .header {
-   // transition: height .5s linear;
-    height: 230px;
+    transition: height $scrolling-speed linear;
+    height: $header-height;
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
     background-size: auto 100vh;
     background-position: 50% 0%;
-    &.expanded, &:hover {
-     // max-height: 10%;
-      .header-logo {
-        top: 0px;
-      }
-      //height: 79px;
+    &.expanded {}
+    &.below {
+      z-index: -1;
     }
     text-align: center;
     position: fixed;
@@ -139,6 +146,9 @@ body {
     right: 0;
     left: 0;
     .header-logo {
+      &:hover {
+        top: 0px;
+      }
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -197,6 +207,9 @@ body {
     }
 
     .section {
+      .no-padding {
+        padding-left: 0;
+      }
       transition: all .3s linear;
       clear: both;
       background-repeat: no-repeat;
@@ -464,8 +477,9 @@ body {
     }
   .slide6, .slide7, .slide8 {
     .hit-image, .mas-image, .wf-image {
-      width: 100%;
-      padding: 20px;
+      max-width: 100%;
+      max-height: 100%;
+      padding: 20px 20px 20px 0px;
     }
 
     .hit-image {

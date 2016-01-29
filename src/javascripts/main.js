@@ -1,4 +1,5 @@
 $(document).on('ready', function () {
+    var scrollingTime = 700;
     var anchors = ['home', 'who_is','our_services', 'our_tech', 'our_startups', 'hit_system', 'massajor', 'wow-foto', 'why_litslink', 'contact_us'];
     var texts = {
         home: false,
@@ -22,25 +23,41 @@ $(document).on('ready', function () {
     fpage.fullpage({
         anchors: anchors,
         menu: '#menu',
-        paddingTop: 250,
+        paddingTop: '30vh',
         paddingBottom: 30,
+        scrollingSpeed: scrollingTime,
         responsiveHeight: 750,
         afterLoad: function (anchorLink) {
-            var section = $(this);
-            showHeader(anchorLink === 'home');
+//            showHeader(anchorLink === 'home');
             var text = texts[anchorLink];
+            text && title.text(text);
+        },
+        onLeave: function (index, nextIndex, direction) {
+            var time,
+                text = texts[anchors[nextIndex - 1]],
+                selector = '.slide' + nextIndex,
+                nextSlide = fpage.find(selector);
             if (text) {
-                title.text(text);
                 $body.removeClass('no-text');
-               // title.removeClass('invisible');
             } else {
                 $body.addClass('no-text');
-                //title.addClass('invisible');
-                section.css('padding-top', '150px');
+                var str = title.text().replace(/./g,'&nbsp;');
+                title.html(str);
+                nextSlide.css('padding-top', '15vh');
+            }
+            if (selector === '.slide5') {
+                if (direction === 'down') {
+                    time = 0;
+                } else {
+                    time = scrollingTime
+                }
+                setTimeout(function () {
+                    header.addClass('below');
+                }, time);
+            } else {
+                header.removeClass('below')
             }
         },
-        //scrollBar: true,
-        //resize: true,
         fixedElements: '.header, .footer'
     });
     $('button.navbar-toggle').on('click', function () {
@@ -53,6 +70,7 @@ $(document).on('ready', function () {
             header.removeClass('expanded');
         }
     }
+    return;
     $window.on('scroll', function () {
         var y = window.scrollY || window.pageYOffset;
         showHeader(!y);
