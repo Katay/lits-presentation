@@ -86,7 +86,6 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.2;
-    //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
   }
 
   @media (max-width: 400px) {
@@ -117,11 +116,9 @@ body {
     font-size: 2em;
   }
   .background {
-    transition: all $scrolling-speed linear;
     position:fixed;
     top: $header-height;
     bottom: 0;
-    //top: 0;
     left: 0;
     right: 0;
     background-image: url(../images/background.png);
@@ -130,7 +127,6 @@ body {
     background-position: 50% $background-pos;
   }
   .header {
-    transition: height $scrolling-speed linear;
     height: $header-height;
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
@@ -201,11 +197,26 @@ body {
         display: block;
       }
     }
+    .chevron {
+      position: inherit;
+      color: white;
+      transform: rotate(90deg);
+      top: 2px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: opacity .1s linear;
+      z-index: 1;
+      &:hover + img.header-logo {
+        top: 0;
+      }
+    }
   }
   #fullpage {
     text-align: center;
     vertical-align: middle;
     .fp-tableCell {
+      position: relative;
+      bottom: -10px;
       @media screen and (max-height: $responsive-height) {
         height: auto !important;
         display: inline-block;
@@ -271,6 +282,10 @@ body {
     .slide1 {
       img {
         max-width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
       }
     }
 
@@ -284,7 +299,6 @@ body {
           position: absolute;
           height: 40px;
           width: 40px;
-          //background-color: red;
         }
         .sw {
           bottom: 0;
@@ -334,9 +348,6 @@ body {
           border-right: $broken-border;
         }
       }
-      .slide2-map {
-        width: 100%;
-      }
 
       .the_concept {
         font-size: 1.84em;
@@ -360,6 +371,13 @@ body {
         text-align: left;
         //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
       }
+      img{
+        @media (max-height: 643px){
+          position: relative;
+          top: -10px;
+          width: 90%;
+        }
+      }
     }
 
     .slide3 {
@@ -373,16 +391,25 @@ body {
         }
       }
 
-      img {
-        max-width: 100%;
-      }
-
       .row {
         background-image: url(../images/rectangle_1.png);
         background-repeat: no-repeat;
         background-position: 0% 100%;
         background-size: 100% 95%;
         margin: 10px 0;
+      }
+      .top-row {
+        @media (max-height: 643px){
+          margin: -15px auto 0;
+        }
+        img {
+          width: 50%;
+        }
+      }
+      .bottom-row {
+        img {
+          width: 35%;
+        }
       }
 
       .our_main_service {
@@ -431,7 +458,11 @@ body {
         text-align: center;
         //transform: matrix( 1.07853071230185,0,0,1.08514501832789,0,0);
       }
-
+      @media (max-height: 643px){
+        .row {
+          margin-top: -50px;
+        }
+      }
     }
 
     .slide5 {
@@ -478,6 +509,21 @@ body {
         top: -30px;
         &.hit-rect {
           top: 0px;
+        }
+      }
+      @media (max-height: 643px){
+        .inside-image {
+          width: 300px;
+          position: inherit;
+          top: -10px;
+        }
+        .logo-icon {
+          position: relative;
+          top: -25px;
+        }
+        .image-description {
+          position: relative;
+          bottom: 25px;
         }
       }
     }
@@ -536,7 +582,39 @@ body {
       //transform: matrix( 1.07853071230185,0,0,1.08602720342926,0,0);
     }
   }
-
+  .slide6 {
+    @media (max-height: 643px){
+      img {
+        width: 513px;
+        position: inherit;
+        left:-50px;
+        top: -30px;
+      }
+    }
+  }
+  .slide7 {
+    @media (max-height: 643px){
+      img {
+        width: 70%;
+      }
+      .mas-description {
+        top: 10%
+      }
+      .mas-header {
+        text-align: left;
+      }
+    }
+  }
+  .slide8 {
+    @media (max-height: 643px){
+      img {
+        width:70%;
+      }
+      .wf-header {
+        text-align: left;
+      }
+    }
+  }
     .tech-key {
       &:before {
         display: inline-block;
@@ -576,7 +654,7 @@ body {
         background-repeat: no-repeat;
         background-position: 0% 100%;
         background-size: 100% 100%;
-        font-size: 1.7em;
+        font-size: 1.2em;
         font-family: "Myriad Pro";
         color: rgb(255, 255, 255);
         line-height: 1;
