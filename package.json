@@ -5,7 +5,8 @@
   "scripts": {
     "start": "gulp js sass images fonts --production=true",
     "dev": "gulp watch",
-    "staging": "fly staging"
+    "staging": "fly staging",
+    "server": "static -a 0.0.0.0 ./public"
   },
   "dependencies": {
     "del": "^2.0.2",

@@ -28,13 +28,13 @@ $(document).on('ready', function () {
         scrollingSpeed: scrollingTime,
         responsiveHeight: 580,
         afterLoad: function (anchorLink) {
-//            showHeader(anchorLink === 'home');
             var text = texts[anchorLink];
             text && title.text(text);
         },
         onLeave: function (index, nextIndex, direction) {
             var time,
-                text = texts[anchors[nextIndex - 1]],
+                anchorLink = anchors[nextIndex - 1],
+                text = texts[anchorLink],
                 selector = '.slide' + nextIndex,
                 nextSlide = fpage.find(selector);
             if (text) {
@@ -57,6 +57,7 @@ $(document).on('ready', function () {
             } else {
                 header.removeClass('below');
             }
+            showHeader(anchorLink === 'home');
         },
         fixedElements: '.header, .footer'
     });
