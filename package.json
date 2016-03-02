@@ -23,12 +23,14 @@
     "gulp-uglify": "^1.4.1",
     "imagemin-gifsicle": "^4.2.0",
     "imagemin-jpeg-recompress": "^4.3.0",
-    "imagemin-pngquant": "^4.2.0",
+    "imagemin-pngquant": "^4.2.2",
     "optimist": "^0.6.1"
   },
   "devDependencies": {
     "bootstrap": "^3.3.6",
     "fullpage.js": "^2.7.6",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-update-modul": "^1.5.3",
     "jquery": "^2.2.0"
   }
 }

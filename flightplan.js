@@ -6,6 +6,7 @@ var plan = require('flightplan');
 plan.target('staging', {
   host: '178.159.110.16',
   username: 'dev_lits',
+  privateKey: '/home/lits/.ssh/id_rsa',
   agent: process.env.SSH_AUTH_SOCK
 }, {
   root: '/var/www/devlits.com/lp.devlits.com'
